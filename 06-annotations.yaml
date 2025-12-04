@@ -2,10 +2,10 @@ apiVersion: v1
 kind: Pod
 metadata:
   name: annotation
-  annotation:
+  annotations:
     jenkins.url: "http://jenkins.arundev.com/buil/job/s"
     imageregistry: "https:hub.docker.com"
 spec:
-  container:
+  containers:
   - name: nginx
     image: nginx

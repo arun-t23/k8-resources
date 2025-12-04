@@ -4,5 +4,8 @@ metadata:
   name: error-test
 spec:
   containers:
-  -  name: nginx
-     image: ngindddubuhsf
+  # -  name: nginx
+  #    image: ngindddubuhsf   ### ImagePullBackoff error here
+  - name: almalinux
+    image: almalinux:9
+    

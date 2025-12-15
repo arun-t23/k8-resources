@@ -1,0 +1,16 @@
+### creating PV is admin work
+---
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: test-pv
+spec:
+  accessModes:
+  - ReadWriteOnce ## the ebs only access accessed by one pod so this option
+  persistentVolumeReclaimPolicy: Retain ## retain means dont delete data, Recycle means delete data dont delete disk, Delete means Delete the disk
+  capacity:
+    storage: 15Gi
+  csi:
+    driver: ebs.csi.aws.com
+    fsType: ext4
+    volumeHandle: vol-03c604538dd7d2f41
